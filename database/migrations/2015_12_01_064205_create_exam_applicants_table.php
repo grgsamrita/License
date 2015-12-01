@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRenewTable extends Migration {
+class CreateExamApplicantsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,12 @@ class CreateRenewTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('renew',function(Blueprint $table)
+		Schema::create('exam_applicants', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('lic_id');
-			$table->date('renew_date');
-			$table->date('new_expiry');
+			$table->integer('exam_id');
+			$table->integer('applicant_id');
+			$table->string('status');
 			$table->timestamps();
 		});
 	}
@@ -29,7 +29,7 @@ class CreateRenewTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('exam_applicants');
 	}
 
 }

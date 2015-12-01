@@ -6,13 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CreateApplicantTable' => $baseDir . '/database/migrations/2015_10_30_044545_create_applicant_table.php',
-    'CreateExamApplicantTable' => $baseDir . '/database/migrations/2015_10_30_151427_create_exam_applicant_table.php',
-    'CreateExamTable' => $baseDir . '/database/migrations/2015_10_30_025439_create_exam_table.php',
-    'CreateLicenseTable' => $baseDir . '/database/migrations/2015_10_30_151229_create_license_table.php',
+    'CreateApplicantsTable' => $baseDir . '/database/migrations/2015_12_01_064027_create_applicants_table.php',
+    'CreateExamApplicantsTable' => $baseDir . '/database/migrations/2015_12_01_064205_create_exam_applicants_table.php',
+    'CreateExamsTable' => $baseDir . '/database/migrations/2015_12_01_063752_create_exams_table.php',
+    'CreateLicensesTable' => $baseDir . '/database/migrations/2015_12_01_064117_create_licenses_table.php',
     'CreateRenewTable' => $baseDir . '/database/migrations/2015_10_30_151937_create_renew_table.php',
-    'CreateUserTable' => $baseDir . '/database/migrations/2015_10_30_044211_create_user_table.php',
-    'CreateVoucherTable' => $baseDir . '/database/migrations/2015_10_30_044401_create_voucher_table.php',
+    'CreateRenewsTable' => $baseDir . '/database/migrations/2015_12_01_064255_create_renews_table.php',
+    'CreateUsersTable' => $baseDir . '/database/migrations/2015_12_01_063643_create_users_table.php',
+    'CreateVouchersTable' => $baseDir . '/database/migrations/2015_12_01_063934_create_vouchers_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Facade.php',
@@ -428,5 +429,4 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
-    'Text_Template' => $vendorDir . '/phpunit/php-text-template/Text/Template.php',
 );
