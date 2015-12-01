@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateApplicantTable extends Migration {
+class CreateApplicantsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateApplicantTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('applicant', function(Blueprint $table)
+		Schema::create('applicants', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name');
@@ -23,8 +23,8 @@ class CreateApplicantTable extends Migration {
 			$table->string('vehicle_type');
 			$table->string('status');
 			$table->string('license_type');
-			$table->timestamps();
 			//image
+			$table->timestamps();
 		});
 	}
 
@@ -35,7 +35,7 @@ class CreateApplicantTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('applicant');
+		Schema::drop('applicants');
 	}
 
 }

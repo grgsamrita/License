@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExamApplicantTable extends Migration {
+class CreateLicensesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,14 @@ class CreateExamApplicantTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('exam_applicant',function(Blueprint $table)
+		Schema::create('licenses', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('exam_id');
+			$table->integer('lic_no');
+			$table->date('issue_date');
+			$table->date('expiry_date');
+			$table->string('type');
 			$table->integer('applicant_id');
-			$table->string('status');
 			$table->timestamps();
 		});
 	}
@@ -29,7 +31,7 @@ class CreateExamApplicantTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('exam_applicant');
+		Schema::drop('licenses');
 	}
 
 }

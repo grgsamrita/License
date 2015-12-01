@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVoucherTable extends Migration {
+class CreateVouchersTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,16 +12,17 @@ class CreateVoucherTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('voucher', function(Blueprint $table)
+		Schema::create('vouchers', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->date('voucher_date');
+			$table->date('voucher_date');
             $table->integer('voucher_id');
             //image
             $table->string('verification');
             $table->date('ver_date');
             $table->integer('ver_UID');
             $table->timestamps();
+			
 		});
 	}
 
@@ -32,7 +33,7 @@ class CreateVoucherTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('voucher');
+		Schema::drop('vouchers');
 	}
 
 }
